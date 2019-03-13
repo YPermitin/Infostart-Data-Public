@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.7">
+	<ConfigVersions>
+		<Metadata name="CommonModule.ПомощникРаботыСВнешнимИсточникомДанных" id="c67c9e57-2bdd-4cbc-b48e-3970bc80bf6c" configVersion="291bc19845f0c4469c65410b87c051b000000000"/>
+		<Metadata name="CommonModule.ПомощникРаботыСВнешнимИсточникомДанных.Module" id="c67c9e57-2bdd-4cbc-b48e-3970bc80bf6c.0" configVersion="729b21e551ca4544a85dd50ae966c31300000000"/>
+		<Metadata name="Configuration.ТрюкиСВнешнимиИсточникамиДанных" id="c8cb64ea-442d-4f63-9c58-b520b94663cd" configVersion="0785c49018877a46bf5b319a95f36e4e00000000"/>
+		<Metadata name="Document.ТестовыйДокумент" id="aca42a59-38c6-46fa-98a7-79b81b7c1f5f" configVersion="5b709bccd3e36a41811572f44f221d9400000000"/>
+		<Metadata name="ExternalDataSource.ПримерИсточникаДанных" id="44639d07-49e3-4297-b045-d94a220a615d" configVersion="ee277c23bfb5604abc7ebbb0ca359af500000000">
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Function.ExecCustomCommand" id="4020be95-a21b-49fb-9d3e-3e2d28d5c3ef"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Function.ProcWithOutputParams" id="4d635ecc-acd6-451b-b4d3-400f014afff4"/>
+		</Metadata>
+		<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections" id="675f1662-ff8d-466d-bd62-a1b6e2e31139" configVersion="fc48433bc24da847a30164c3b042512200000000">
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.Запрос" id="2da487b8-ebc5-4000-a564-7e439adfbd75"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.Статус" id="4606f292-01e7-4bf8-aeec-f87db3588822"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.ТипКоманды" id="47692eb5-6a4c-430c-a4e2-432e39f04599"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.Хост" id="5f0cae61-19cb-452c-a444-6615723e1f20"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.Приложение" id="712f75b1-740f-4f60-b937-bb3722cd5bb4"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.Соединение" id="7dd179b3-8fd1-4d86-b79b-e7c354b7dae7"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.Логин" id="bb1d7bd9-226c-4c88-956e-d627a1b02476"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.ActiveConnections.Field.CPU" id="e176a90d-5959-4066-aa70-51733971d235"/>
+		</Metadata>
+		<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.CallsAndValues" id="5deeb22f-7ed6-4e96-aaa7-318de0690693" configVersion="6e3455c0e4a3694dba4aa4cc242a7b2200000000">
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.CallsAndValues.Field.ID" id="567366f6-f7b4-4ddc-935b-e9804ece6d07"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.CallsAndValues.Field.Result" id="6d8bb00d-6089-4ace-86ab-e3891f90cd5e"/>
+		</Metadata>
+		<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.KeyOperations" id="eae8944a-4452-45a2-bcde-fe1141fb28f4" configVersion="63f40289034f3b42a77a4553280fb11400000000">
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.KeyOperations.Field.Description" id="4b2dad5a-cf3b-4c23-ae11-53c173820c72"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.KeyOperations.Field.Name" id="5548ab93-6004-4fb5-a702-58591f5b1a9b"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.KeyOperations.Field.ID" id="86cc53b2-43b6-4cfc-9de0-12e52a3061cd"/>
+		</Metadata>
+		<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements" id="d6cc60ec-e3f9-45b2-a70a-74ebed04c1b0" configVersion="2a785158120ba546a973d6498502bfa800000000">
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements.Field.UserName" id="14587b03-688f-42b2-b402-a389d926c7c7"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements.Field.KeyOperation" id="212a43ea-8e78-4460-a55b-6c4f7b1e0eb5"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements.Field.PeriodHour" id="506a72fe-77c3-4b25-982f-e555dc1e7dfd"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements.Field.BeginDate" id="7097e3b6-412b-4237-a853-7d71f267c02f"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements.Field.Duration" id="72608e5f-7e72-4309-9e80-17686cc140cb"/>
+			<Metadata name="ExternalDataSource.ПримерИсточникаДанных.Table.PerformanceMeasurements.Field.SessionID" id="850f5ebd-550f-426e-8b23-d4ede24f5256"/>
+		</Metadata>
+		<Metadata name="Language.Русский" id="83bb1bad-5b8a-4f3f-9077-f0d0f94a04e5" configVersion="d826e4f903fa6f42986f683bca440b6f00000000"/>
+		<Metadata name="Role.ПолныеПрава" id="d4169069-581c-4b38-87bc-9e11083fcc27" configVersion="ab144b81f72e8145adbcbe750cdfdfa400000000"/>
+		<Metadata name="Role.ПолныеПрава.Rights" id="d4169069-581c-4b38-87bc-9e11083fcc27.0" configVersion="913ba112540acf498f72b31d724d359600000000"/>
+		<Metadata name="Subsystem.ТрюкиСВнешнимиИсточникамиДанных" id="98200469-382b-435f-9ba5-01f55379ba50" configVersion="7c933320ed2a3544b48606f3c4ebb18a00000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

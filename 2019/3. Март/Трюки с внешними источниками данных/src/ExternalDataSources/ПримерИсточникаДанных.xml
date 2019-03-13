@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<ExternalDataSource uuid="44639d07-49e3-4297-b045-d94a220a615d">
+		<InternalInfo>
+			<xr:GeneratedType name="ExternalDataSourceManager.ПримерИсточникаДанных" category="Manager">
+				<xr:TypeId>cb766ce7-7173-4d07-9706-cc2cd6354406</xr:TypeId>
+				<xr:ValueId>3d673242-7627-4160-a535-1dca21de0fbc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceTablesManager.ПримерИсточникаДанных" category="TablesManager">
+				<xr:TypeId>f3156035-eadf-4208-92b3-bd70b8dd1e73</xr:TypeId>
+				<xr:ValueId>625f32f4-629a-4e23-ace6-9dabe5524275</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceCubesManager.ПримерИсточникаДанных" category="CubesManager">
+				<xr:TypeId>4253fb1a-1b4a-491f-b4e1-62d9d3445b40</xr:TypeId>
+				<xr:ValueId>c4052f99-dc15-4d73-b0b4-50c2a6ecbe8d</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПримерИсточникаДанных</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример источника данных</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Table>CallsAndValues</Table>
+			<Table>KeyOperations</Table>
+			<Table>PerformanceMeasurements</Table>
+			<Table>ActiveConnections</Table>
+			<Function uuid="4020be95-a21b-49fb-9d3e-3e2d28d5c3ef">
+				<Properties>
+					<Name>ExecCustomCommand</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Exec custom command</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ReturnValue>false</ReturnValue>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ExpressionInDataSource>dbo.ExecCustomCommand(&amp;1)</ExpressionInDataSource>
+				</Properties>
+			</Function>
+			<Function uuid="4d635ecc-acd6-451b-b4d3-400f014afff4">
+				<Properties>
+					<Name>ProcWithOutputParams</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Proc with output params</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ReturnValue>false</ReturnValue>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ExpressionInDataSource>dbo.ProcWithOutputParams(&amp;1, &amp;2, &amp;3)</ExpressionInDataSource>
+				</Properties>
+			</Function>
+		</ChildObjects>
+	</ExternalDataSource>
+</MetaDataObject>
