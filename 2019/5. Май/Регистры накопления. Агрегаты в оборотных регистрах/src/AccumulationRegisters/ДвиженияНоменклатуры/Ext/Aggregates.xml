@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AccumulationRegisterAggregates xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Aggregate id="dd0befa2-fa0b-4ca5-91ef-7011cc3b52be">
+		<Use>Always</Use>
+		<Periodicity>Year</Periodicity>
+		<Dimensions>
+			<Dimension ref="AccumulationRegister.ДвиженияНоменклатуры.Dimension.Номенклатура">true</Dimension>
+			<Dimension ref="AccumulationRegister.ДвиженияНоменклатуры.Dimension.Склад">true</Dimension>
+		</Dimensions>
+	</Aggregate>
+</AccumulationRegisterAggregates>
