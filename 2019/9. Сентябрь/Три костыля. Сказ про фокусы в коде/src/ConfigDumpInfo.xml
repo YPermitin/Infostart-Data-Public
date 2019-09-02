@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.7">
+	<ConfigVersions>
+		<Metadata name="CommonPicture.ПиктограммаПодсистемы" id="74fcdc8d-8615-48eb-b99d-bd3d1ca83929" configVersion="622d525c32ef9c4c85b4d992c8312a2b00000000"/>
+		<Metadata name="CommonPicture.ПиктограммаПодсистемы.Picture" id="74fcdc8d-8615-48eb-b99d-bd3d1ca83929.0" configVersion="c6b97a39d8665d4e8bdcf57163766c1f00000000"/>
+		<Metadata name="Configuration.ТриКостыля" id="f1eb112a-3a09-4802-bbf6-555f94ac6f62" configVersion="ffed442b5a077c43b1ef8025d326c15600000000"/>
+		<Metadata name="Configuration.ТриКостыля.HomePageWorkArea" id="41335a4e-4a30-41a6-a1d1-91df4094dbcb.8" configVersion="7258cec47b66fa42beb96a401912b84300000000"/>
+		<Metadata name="Configuration.ТриКостыля.ManagedApplicationModule" id="41335a4e-4a30-41a6-a1d1-91df4094dbcb.6" configVersion="a2ed97c8f08db64798328490706a1cd900000000"/>
+		<Metadata name="Configuration.ТриКостыля.ParentConfigurations" id="41335a4e-4a30-41a6-a1d1-91df4094dbcb.4" configVersion="86ab57c947c57341839e2229a28c4b9200000000"/>
+		<Metadata name="Configuration.ТриКостыля.SessionModule" id="41335a4e-4a30-41a6-a1d1-91df4094dbcb.7" configVersion="444fcdf62759f74f95c75fe2a1f6084a00000000"/>
+		<Metadata name="Configuration.ТриКостыля.Splash" id="41335a4e-4a30-41a6-a1d1-91df4094dbcb.2" configVersion="ecc2b0d9f9f75240a469451211d1c62a00000000"/>
+		<Metadata name="DataProcessor.ЗаполнитьДокументы" id="8212def9-c22c-4858-8037-e92387d58a32" configVersion="034d58fc16677644b63885f10cbfa82300000000"/>
+		<Metadata name="DataProcessor.ЗаполнитьДокументы.Form.Форма" id="9120cf8c-ec4b-4105-b860-8f2ce182ff15" configVersion="01fa4158aaf1e04fbd161e559a1effda00000000"/>
+		<Metadata name="DataProcessor.ЗаполнитьДокументы.Form.Форма.Form" id="9120cf8c-ec4b-4105-b860-8f2ce182ff15.0" configVersion="9d46d47fbebb1842b3b3c7bf8dfe0f9100000000"/>
+		<Metadata name="DataProcessor.ПроверкаНаличияСвойства" id="bbe09543-ba96-4f7f-bfb9-c98643917612" configVersion="ba6763ee8108094cb341b9497164a26f00000000"/>
+		<Metadata name="DataProcessor.ПроверкаНаличияСвойства.Form.Форма" id="1d7dd181-9130-4b60-a822-6bdcfcb82b3b" configVersion="d17bae7b354f1d4ea4e9d8a88f1b4c4800000000"/>
+		<Metadata name="DataProcessor.ПроверкаНаличияСвойства.Form.Форма.Form" id="1d7dd181-9130-4b60-a822-6bdcfcb82b3b.0" configVersion="1a404de8646b5b4b87b07a81c663581200000000"/>
+		<Metadata name="Document.ТестовыйДокумент" id="53e3978d-55ab-4672-95a8-4e865be33f8e" configVersion="0d0b52a6e21fba4f808793ee52102a2200000000">
+			<Metadata name="Document.ТестовыйДокумент.Attribute.Сумма" id="05817bbf-8c2c-4cdd-ac90-c2d43e32c955"/>
+			<Metadata name="Document.ТестовыйДокумент.Attribute.Рейтинг" id="3c1b5f7c-b3c0-4b68-aba1-57138bfb9b52"/>
+			<Metadata name="Document.ТестовыйДокумент.Attribute.Комментарий" id="ef6a1fe5-beff-412f-91cf-e33b05136d37"/>
+		</Metadata>
+		<Metadata name="Document.ТестовыйДокумент.Form.ФормаДокумента" id="a2a77297-c0c7-4434-ad7f-451b7ee4c797" configVersion="25fb35f0e150b04a8b7f2e03ac22d98a00000000"/>
+		<Metadata name="Document.ТестовыйДокумент.Form.ФормаДокумента.Form" id="a2a77297-c0c7-4434-ad7f-451b7ee4c797.0" configVersion="b089f3b4c5fd3e43babfdf6a8d89d91200000000"/>
+		<Metadata name="Document.ТестовыйДокумент.Form.ФормаСписка" id="38483e6b-b555-4e2c-bf8f-12b42eee8adb" configVersion="35e096a890df4540a9c30d73ba31bf1d00000000"/>
+		<Metadata name="Document.ТестовыйДокумент.Form.ФормаСписка.Form" id="38483e6b-b555-4e2c-bf8f-12b42eee8adb.0" configVersion="b26a67737b67df4c9bf96958ff4e7a9b00000000"/>
+		<Metadata name="Language.Русский" id="c024bd02-7596-47a6-a167-f80dd5903912" configVersion="98c5177c62070341af2f0181614973e800000000"/>
+		<Metadata name="Role.ПолныеПрава" id="0604fa3f-e162-45b5-af69-01ad62ede240" configVersion="0a66787ff74a4d42b5f625afcf13635a00000000"/>
+		<Metadata name="Role.ПолныеПрава.Rights" id="0604fa3f-e162-45b5-af69-01ad62ede240.0" configVersion="259e339e6cfc4c498a11465e430c3a2000000000"/>
+		<Metadata name="Subsystem.ТриКостыля" id="f04ac3b1-5557-4932-bd9e-165102d3719f" configVersion="d532b61aa7eabb43947ba5f255b4f99a00000000"/>
+		<Metadata name="Subsystem.ТриКостыля.CommandInterface" id="f04ac3b1-5557-4932-bd9e-165102d3719f.1" configVersion="f696e40bf642404a935b10feac35a12300000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
