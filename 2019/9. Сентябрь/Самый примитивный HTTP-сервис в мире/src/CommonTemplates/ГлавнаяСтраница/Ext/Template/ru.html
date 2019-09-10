@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title>Редактируемый SELECT</title><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><style>element.style {
+	DISPLAY: block
+}
+.info {
+	MARGIN-TOP: 15px
+}
+.form-control {
+	FONT-SIZE: 16px; BORDER-TOP: #cccccc 1px solid; HEIGHT: 54px; BORDER-RIGHT: #cccccc 1px solid; WIDTH: 100%; BACKGROUND-IMAGE: none; BORDER-BOTTOM: #cccccc 1px solid; COLOR: #555555; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PADDING-LEFT: 12px; BORDER-LEFT: #cccccc 1px solid; DISPLAY: block; LINE-HEIGHT: 1.8; PADDING-RIGHT: 12px; BACKGROUND-COLOR: #ffffff; border-radius: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+INPUT {
+	FONT-FAMILY: inherit
+}
+BUTTON {
+	FONT-FAMILY: inherit
+}
+SELECT {
+	FONT-FAMILY: inherit
+}
+TEXTAREA {
+	FONT-FAMILY: inherit
+}
+LABEL {
+	MARGIN-BOTTOM: 5px; MAX-WIDTH: 100%; FONT-WEIGHT: bold; DISPLAY: inline-block
+}
+INPUT {
+	LINE-HEIGHT: normal
+}
+BUTTON {
+	COLOR: ; MARGIN: 0px
+}
+INPUT {
+	COLOR: ; MARGIN: 0px
+}
+OPTGROUP {
+	COLOR: ; MARGIN: 0px
+}
+SELECT {
+	COLOR: ; MARGIN: 0px
+}
+TEXTAREA {
+	COLOR: ; MARGIN: 0px
+}
+* {
+	BOX-SIZING: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+UNKNOWN {
+	PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+user agent stylesheetinput {
+	CURSOR: auto; BORDER-TOP: 2px inset; BORDER-RIGHT: 2px inset; BORDER-BOTTOM: 2px inset; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: 2px inset; PADDING-RIGHT: 1px; BACKGROUND-COLOR: white; -webkit-appearance: textfield; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; -webkit-rtl-ordering: logical; -webkit-user-select: text
+}
+user agent stylesheetinput {
+	WORD-SPACING: normal; TEXT-TRANSFORM: none; COLOR: ; FONT: 13px Arial; MARGIN: 0em; DISPLAY: inline-block; LETTER-SPACING: normal; TEXT-INDENT: 0px; text-rendering: auto; text-shadow: none
+}
+TEXTAREA {
+	WORD-SPACING: normal; TEXT-TRANSFORM: none; COLOR: ; FONT: 13px Arial; MARGIN: 0em; DISPLAY: inline-block; LETTER-SPACING: normal; TEXT-INDENT: 0px; text-rendering: auto; text-shadow: none
+}
+keygen {
+	WORD-SPACING: normal; TEXT-TRANSFORM: none; COLOR: ; FONT: 13px Arial; MARGIN: 0em; DISPLAY: inline-block; LETTER-SPACING: normal; TEXT-INDENT: 0px; text-rendering: auto; text-shadow: none
+}
+SELECT {
+	WORD-SPACING: normal; TEXT-TRANSFORM: none; COLOR: ; FONT: 13px Arial; MARGIN: 0em; DISPLAY: inline-block; LETTER-SPACING: normal; TEXT-INDENT: 0px; text-rendering: auto; text-shadow: none
+}
+BUTTON {
+	WORD-SPACING: normal; TEXT-TRANSFORM: none; COLOR: ; FONT: 13px Arial; MARGIN: 0em; DISPLAY: inline-block; LETTER-SPACING: normal; TEXT-INDENT: 0px; text-rendering: auto; text-shadow: none
+}
+user agent stylesheetinput {
+	-webkit-writing-mode: horizontal-tb
+}
+TEXTAREA {
+	-webkit-writing-mode: horizontal-tb
+}
+keygen {
+	-webkit-writing-mode: horizontal-tb
+}
+SELECT {
+	-webkit-writing-mode: horizontal-tb
+}
+BUTTON {
+	-webkit-writing-mode: horizontal-tb
+}
+meter {
+	-webkit-writing-mode: horizontal-tb
+}
+progress {
+	-webkit-writing-mode: horizontal-tb
+}
+Inherited from DIV#MainPanel STYLE Attribute {
+	MARGIN-BOTTOM: 1px; WIDTH: 100%
+}
+Inherited from BODY.contentpage-with-nav BODY {
+	FONT-SIZE: 16px; FONT-FAMILY: "Helvetica Neue", Helvetica, Arial, sans-serif; COLOR: #696f6f; LINE-HEIGHT: 1.8; BACKGROUND-COLOR: #ffffff
+}
+Inherited from HTML.no-js HTML {
+	FONT-SIZE: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+HTML {
+	FONT-FAMILY: sans-serif; -MS-TEXT-SIZE-ADJUST: 100%; -webkit-text-size-adjust: 100%
+}
+Pseudo :before element *:before {
+	BOX-SIZING: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+*:after {
+	BOX-SIZING: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+Pseudo :after element *:before {
+	BOX-SIZING: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+*:after {
+	BOX-SIZING: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+</style><script id="jquery-js" type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script><script id="editableSelect" type="text/javascript">
+        (function ($) {
+
+            $.fn.editableSelect = function () {
+                var instanceVar;
+
+                this.each(function () {
+                    var originalSelect = $(this);
+
+                    if (originalSelect[0].tagName.toUpperCase() === "SELECT") {
+                        var inputSelect = $("<input/>").first().insertAfter(originalSelect);
+                        var objID = originalSelect.attr("id");
+
+                        originalSelect.bind("change", function (elem) {
+                            try {
+                                $.ajax({
+                                    type: "POST",
+                                    contentType: "application/json;charset=utf-8",
+                                    url: "http://localhost/Exp/hs/DevelPlatform/info",
+                                    data: "{ \"GUID\": \"" + originalSelect.val() + "\" }",
+                                    dataType: "json",
+                                    success: function (queryResult) {
+                                        try {
+                                            var Code = queryResult[0].Code;
+                                            var FullName = queryResult[0].FullName;
+                                            var Art = queryResult[0].Art;
+                                            var Descr = queryResult[0].Descr;
+
+                                            $('#ArtValue').text(Art);
+                                            $('#CodeValue').text(Code);
+                                            $('#DescrValue').text(Descr);
+                                            $('#CodeFullNameValue').text(FullName);
+                                        } catch (e) {
+
+                                        }
+                                    }
+                                });
+                            }
+                            catch (ex) {
+                                alert("Error");
+                            }
+                        });
+
+                        inputSelect.bind('input', function (elem) {
+                            var originalSelectId = inputSelect.attr('id').replace('Editable', '');
+                            var originalOptions = $('#' + originalSelectId).children('option');
+
+                            var wrapper = $(inputSelect[0].parentNode);
+                            var selectList = wrapper.children('ol').children('li');
+                            selectList.remove();
+
+                            var inputText = inputSelect.val();    							   
+
+                            try {
+                                $.ajax({
+                                    type: "POST",
+                                    contentType: "application/json;charset=utf-8",
+                                    url: "http://localhost/Exp/hs/DevelPlatform/products",
+                                    data: "{ \"query\": \"" + inputText + "\" }",
+                                    dataType: "json",
+                                    success: function (queryResult) {
+                                        var originalSelect = $("#OriginalSelect");
+                                        var originalSelectOptions = $(originalSelect[0].options);
+                                        originalSelectOptions.empty();
+
+                                        var wrapper = $(originalSelect[0].parentNode);
+
+                                        var editableInput = wrapper.children('ol');
+                                        var editableInputOptions = editableInput.first().children();
+                                        editableInputOptions.remove();
+
+                                        for (var i = 0; i < queryResult.length; i++) {
+                                            var item = queryResult[i];
+                                            originalSelectOptions.append('<option value="' + item.GUID + '">' + item.Name + '</option>');
+                                        }
+
+                                        if (originalSelect.children().length > 0) {
+                                            originalSelect.children().each(function (index, value) {
+                                                prepareOption(originalSelect, index, $(value).text());
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+                            catch (ex) {
+                                alert("Error");
+                            }
+                        });
+
+                        inputSelect.bind("focus", function (elem) {
+                            if (inputSelect.val() == undefined
+                                || inputSelect.val() == '')
+                                inputSelect.trigger("input");
+                        });
+
+                        inputSelect.attr({
+                            alt: originalSelect.attr("alt"),
+                            title: originalSelect.attr("title"),
+                            class: originalSelect.attr("class"),
+                            name: originalSelect.attr("name") + 'Editable',
+                            disabled: originalSelect.attr("disabled"),
+                            tabindex: originalSelect.attr("tabindex"),
+                            id: objID + 'Editable'
+                        });
+
+                        inputSelect.val(originalSelect.find(":selected").text());
+
+                        var selectList = $("<ol/>").css({
+                            display: "none",
+                            listStyleType: "none",
+                            padding: 0,
+                            margin: 0,
+                            border: "solid 1px #ccc",
+                            fontFamily: inputSelect.css("fontFamily"),
+                            fontSize: inputSelect.css("fontSize"),
+                            background: "#fff",
+                            position: "absolute",
+                            zIndex: 1000000
+                        }).insertAfter(inputSelect);
+
+                        originalSelect.children().each(function (index, value) {
+                            prepareOption(originalSelect, index, $(value).text());
+                        });
+
+                        inputSelect.focus(function () {
+                            selectList.fadeIn(100);
+                        }).blur(function () {
+                            selectList.fadeOut(100);
+                            setTimeout(function () { inputSelect.val(originalSelect.find(":selected").text()) }, 200);
+                        }).keyup(function (e) {
+                            if (e.which == 13) inputSelect.trigger("blur");
+                        });
+
+                        originalSelect.css({ visibility: "hidden", display: "none" });
+                        instanceVar = inputSelect
+                    } else {
+                        return false;
+                    }
+                });
+
+                return instanceVar;
+            };
+
+            function prepareOption(itemlSelect, index, value) {
+                var choosedValue = itemlSelect[0].options[index].value;
+                var wrapper = $(itemlSelect[0].parentNode);
+
+                var selectOption = $("<li value=" + choosedValue + ">" + value + "</li>").appendTo(wrapper.children("ol"));
+                var inputSelect = wrapper.children("input");
+                selectOption.css({
+                    padding: "3px",
+                    textAlign: "left",
+                    cursor: "pointer"
+                }).hover(
+                function () {
+                    selectOption.css({ backgroundColor: "#eee" });
+                },
+                function () {
+                    selectOption.css({ backgroundColor: "#fff" });
+                });
+
+                selectOption.click(function () {
+                    var originalSelectControl = $(inputSelect[0].parentNode).children('select');
+                    originalSelectControl.children().each(function (index, currentValue) {
+                        if ($(currentValue).val() == $(selectOption).attr('value')) {
+                            $(currentValue).attr('selected', 'selected');
+                        } else {
+                            $(currentValue).removeAttr('selected');
+                        }
+                    });
+		            setTimeout(function () {
+		                inputSelect.val(selectOption.text())
+		                // Обрабатываем события элементов
+		                originalSelectControl.trigger("change");
+		                inputSelect.trigger("change");
+		            }, 200);
+                });
+            }
+
+        }(jQuery));
+    </script><script>
+        $(function () {
+            $("#OriginalSelect").editableSelect();                    
+        });
+    </script><meta name="GENERATOR" content="MSHTML 11.00.10240.16566"></meta></head><body><header><h2>Получение информации о товаре с помощью HTTP-сервисов</h2></header><section id="Cities"><label id="LabelSelect">Товар:</label> <select id="OriginalSelect" class="form-control"></select></section><section id="AdditionalInformation" class="info"><label id="AddInfo">Информация о товаре:</label> 
+<div id="FULLNAME"><label id="FullNameLabel">Полное наименование:</label> <label id="CodeFullNameValue"></label></div>
+<div id="CODE"><label id="ArtLabel">Артикул:</label> <label id="ArtValue"></label></div>
+<div id="ART"><label id="CodeLabel">Код:</label> <label id="CodeValue"></label></div>
+<div id="DESCR"><label id="DescrLabel">Описание:</label> <label id="DescrValue"></label></div></section></body></html>
