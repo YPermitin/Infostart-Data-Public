@@ -109,26 +109,33 @@ Pseudo :after element *:before {
 *:after {
 	BOX-SIZING: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
 }
-</style><script id="jquery-js" type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script><script id="editableSelect" type="text/javascript">
-        (function ($) {
-
-            $.fn.editableSelect = function () {
-                var instanceVar;
-
-                this.each(function () {
-                    var originalSelect = $(this);
-
-                    if (originalSelect[0].tagName.toUpperCase() === "SELECT") {
-                        var inputSelect = $("<input/>").first().insertAfter(originalSelect);
-                        var objID = originalSelect.attr("id");
-
-                        originalSelect.bind("change", function (elem) {
-                            try {
+</style><script src="//code.jquery.com/jquery-1.12.4.min.js"></script><script src="//rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"></script><link rel="stylesheet" href="//rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body><header><h2>Получение информации о товаре с помощью HTTP-сервисов</h2></header><section id="Cities"><label id="LabelSelect">Товар:</label> <select id="OriginalSelect" class="form-control"></select></section><section id="AdditionalInformation" class="info"><label id="AddInfo">Информация о товаре</label> 
+<div id="FULLNAME"><label id="FullNameLabel">Полное наименование:</label> <label id="CodeFullNameValue"></label></div>
+<div id="CODE"><label id="ArtLabel">Артикул:</label> <label id="ArtValue"></label></div>
+<div id="ART"><label id="CodeLabel">Код:</label> <label id="CodeValue"></label></div>
+<div id="DESCR"><label id="DescrLabel">Описание:</label> <label id="DescrValue"></label></div></section><script>       
+        $(function () {
+            $("#OriginalSelect")
+            	.editableSelect();
+				
+			$("#OriginalSelect")
+				.on('input', function () {
+					
+					var query = $("#OriginalSelect").val();
+            		updateList(query);
+					
+				})
+        	})
+        	.on('select.editable-select', function (e, li) {
+				
+        		var GUID = $(li).attr('data-value');
+        		
+        		try {
                                 $.ajax({
                                     type: "POST",
                                     contentType: "application/json;charset=utf-8",
-                                    url: "http://localhost/Exp/hs/DevelPlatform/info",
-                                    data: "{ \"GUID\": \"" + originalSelect.val() + "\" }",
+                                    url: "http://{ServerName}/{DatabaseName}/hs/PrimitiveService/info",
+                                    data: "{ \"GUID\": \"" + GUID + "\" }",
                                     dataType: "json",
                                     success: function (queryResult) {
                                         try {
@@ -150,151 +157,41 @@ Pseudo :after element *:before {
                             catch (ex) {
                                 alert("Error");
                             }
-                        });
-
-                        inputSelect.bind('input', function (elem) {
-                            var originalSelectId = inputSelect.attr('id').replace('Editable', '');
-                            var originalOptions = $('#' + originalSelectId).children('option');
-
-                            var wrapper = $(inputSelect[0].parentNode);
-                            var selectList = wrapper.children('ol').children('li');
-                            selectList.remove();
-
-                            var inputText = inputSelect.val();    							   
-
-                            try {
-                                $.ajax({
-                                    type: "POST",
-                                    contentType: "application/json;charset=utf-8",
-                                    url: "http://localhost/Exp/hs/DevelPlatform/products",
-                                    data: "{ \"query\": \"" + inputText + "\" }",
-                                    dataType: "json",
-                                    success: function (queryResult) {
-                                        var originalSelect = $("#OriginalSelect");
-                                        var originalSelectOptions = $(originalSelect[0].options);
-                                        originalSelectOptions.empty();
-
-                                        var wrapper = $(originalSelect[0].parentNode);
-
-                                        var editableInput = wrapper.children('ol');
-                                        var editableInputOptions = editableInput.first().children();
-                                        editableInputOptions.remove();
-
-                                        for (var i = 0; i < queryResult.length; i++) {
-                                            var item = queryResult[i];
-                                            originalSelectOptions.append('<option value="' + item.GUID + '">' + item.Name + '</option>');
-                                        }
-
-                                        if (originalSelect.children().length > 0) {
-                                            originalSelect.children().each(function (index, value) {
-                                                prepareOption(originalSelect, index, $(value).text());
-                                            });
-                                        }
-                                    }
-                                });
+        	
+			})
+			.on('created.editable-select', function (e) {
+				
+				updateList('');
+			
+			});
+        
+        function updateList(query) {
+        
+        	var originalSelect = $("#OriginalSelect");
+        	var listElement = originalSelect.next();
+        	listElement.empty();
+        	
+            	$.ajax({
+            		type: "POST",
+                    contentType: "application/json;charset=utf-8",
+                    url: "http://{ServerName}/{DatabaseName}/hs/PrimitiveService/products",
+                    data: "{ \"query\": \"" + query + "\" }",
+                    dataType: "json",
+                    success: function (queryResult) {
+                    	try {
+                        	for (var i = 0; i < queryResult.length; i++) {
+                            	var item = queryResult[i];                                                                
+                                originalSelect.editableSelect('add', function() {
+                                	
+                                	$(this).attr('data-value', item.GUID);
+                                	$(this).text(item.Name);
+                                
+                                })                                                                
                             }
-                            catch (ex) {
-                                alert("Error");
-                            }
-                        });
-
-                        inputSelect.bind("focus", function (elem) {
-                            if (inputSelect.val() == undefined
-                                || inputSelect.val() == '')
-                                inputSelect.trigger("input");
-                        });
-
-                        inputSelect.attr({
-                            alt: originalSelect.attr("alt"),
-                            title: originalSelect.attr("title"),
-                            class: originalSelect.attr("class"),
-                            name: originalSelect.attr("name") + 'Editable',
-                            disabled: originalSelect.attr("disabled"),
-                            tabindex: originalSelect.attr("tabindex"),
-                            id: objID + 'Editable'
-                        });
-
-                        inputSelect.val(originalSelect.find(":selected").text());
-
-                        var selectList = $("<ol/>").css({
-                            display: "none",
-                            listStyleType: "none",
-                            padding: 0,
-                            margin: 0,
-                            border: "solid 1px #ccc",
-                            fontFamily: inputSelect.css("fontFamily"),
-                            fontSize: inputSelect.css("fontSize"),
-                            background: "#fff",
-                            position: "absolute",
-                            zIndex: 1000000
-                        }).insertAfter(inputSelect);
-
-                        originalSelect.children().each(function (index, value) {
-                            prepareOption(originalSelect, index, $(value).text());
-                        });
-
-                        inputSelect.focus(function () {
-                            selectList.fadeIn(100);
-                        }).blur(function () {
-                            selectList.fadeOut(100);
-                            setTimeout(function () { inputSelect.val(originalSelect.find(":selected").text()) }, 200);
-                        }).keyup(function (e) {
-                            if (e.which == 13) inputSelect.trigger("blur");
-                        });
-
-                        originalSelect.css({ visibility: "hidden", display: "none" });
-                        instanceVar = inputSelect
-                    } else {
-                        return false;
-                    }
-                });
-
-                return instanceVar;
-            };
-
-            function prepareOption(itemlSelect, index, value) {
-                var choosedValue = itemlSelect[0].options[index].value;
-                var wrapper = $(itemlSelect[0].parentNode);
-
-                var selectOption = $("<li value=" + choosedValue + ">" + value + "</li>").appendTo(wrapper.children("ol"));
-                var inputSelect = wrapper.children("input");
-                selectOption.css({
-                    padding: "3px",
-                    textAlign: "left",
-                    cursor: "pointer"
-                }).hover(
-                function () {
-                    selectOption.css({ backgroundColor: "#eee" });
-                },
-                function () {
-                    selectOption.css({ backgroundColor: "#fff" });
-                });
-
-                selectOption.click(function () {
-                    var originalSelectControl = $(inputSelect[0].parentNode).children('select');
-                    originalSelectControl.children().each(function (index, currentValue) {
-                        if ($(currentValue).val() == $(selectOption).attr('value')) {
-                            $(currentValue).attr('selected', 'selected');
-                        } else {
-                            $(currentValue).removeAttr('selected');
+                     	} catch (e) {
+							alert('Wow! Error!!!');
                         }
-                    });
-		            setTimeout(function () {
-		                inputSelect.val(selectOption.text())
-		                // Обрабатываем события элементов
-		                originalSelectControl.trigger("change");
-		                inputSelect.trigger("change");
-		            }, 200);
-                });
-            }
-
-        }(jQuery));
-    </script><script>
-        $(function () {
-            $("#OriginalSelect").editableSelect();                    
-        });
-    </script><meta name="GENERATOR" content="MSHTML 11.00.10240.16566"></meta></head><body><header><h2>Получение информации о товаре с помощью HTTP-сервисов</h2></header><section id="Cities"><label id="LabelSelect">Товар:</label> <select id="OriginalSelect" class="form-control"></select></section><section id="AdditionalInformation" class="info"><label id="AddInfo">Информация о товаре:</label> 
-<div id="FULLNAME"><label id="FullNameLabel">Полное наименование:</label> <label id="CodeFullNameValue"></label></div>
-<div id="CODE"><label id="ArtLabel">Артикул:</label> <label id="ArtValue"></label></div>
-<div id="ART"><label id="CodeLabel">Код:</label> <label id="CodeValue"></label></div>
-<div id="DESCR"><label id="DescrLabel">Описание:</label> <label id="DescrValue"></label></div></section></body></html>
+                    }
+              	});
+        }
+</script></body></html>

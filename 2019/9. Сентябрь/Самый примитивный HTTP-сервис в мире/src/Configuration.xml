@@ -132,15 +132,16 @@
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
-			<InterfaceCompatibilityMode>Version8_2</InterfaceCompatibilityMode>
-			<CompatibilityMode>Version8_2_16</CompatibilityMode>
+			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
+			<CompatibilityMode>Version8_3_13</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
 			<CommonTemplate>ГлавнаяСтраница</CommonTemplate>
-			<HTTPService>DevelPlatformRu</HTTPService>
+			<HTTPService>PrimitiveService</HTTPService>
 			<Constant>ИмяСервера</Constant>
+			<Constant>ИмяБазы</Constant>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>Склады</Catalog>
 			<Document>ПриходныйОрдер</Document>

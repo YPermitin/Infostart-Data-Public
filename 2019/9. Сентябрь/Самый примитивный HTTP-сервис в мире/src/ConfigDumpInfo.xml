@@ -18,10 +18,11 @@
 		</Metadata>
 		<Metadata name="Catalog.Склады" id="77c09a97-f11d-4f0e-8ec0-c4057b9680b0" configVersion="0707a1b427b75b4f9ba91cb66eb90c7700000000"/>
 		<Metadata name="Catalog.Склады.Predefined" id="77c09a97-f11d-4f0e-8ec0-c4057b9680b0.1c" configVersion="483c531bc7930c478773021385bd9e9700000000"/>
-		<Metadata name="CommonTemplate.ГлавнаяСтраница" id="eb29f98c-1192-4271-af7e-80cf53fe1116" configVersion="dc70182a68cc454a9a3d37f866c177f600000000"/>
-		<Metadata name="CommonTemplate.ГлавнаяСтраница.Template" id="eb29f98c-1192-4271-af7e-80cf53fe1116.0" configVersion="abeddb053000b14ab393ebb1a0bb8f1200000000"/>
-		<Metadata name="Configuration.ПримерHTTPСервиса" id="238725be-e5c6-4859-96cf-f3e61a941536" configVersion="934f0b7ee4fbc44f89205d757f9dd76d00000000"/>
+		<Metadata name="CommonTemplate.ГлавнаяСтраница" id="eb29f98c-1192-4271-af7e-80cf53fe1116" configVersion="87795d42415250428aa5fe9516cbba3200000000"/>
+		<Metadata name="CommonTemplate.ГлавнаяСтраница.Template" id="eb29f98c-1192-4271-af7e-80cf53fe1116.0" configVersion="857ed3669e94774eba8d978e920ec82300000000"/>
+		<Metadata name="Configuration.ПримерHTTPСервиса" id="238725be-e5c6-4859-96cf-f3e61a941536" configVersion="9f389a879fa68c428dc0373ff69ba1e300000000"/>
 		<Metadata name="Configuration.ПримерHTTPСервиса.MainSectionCommandInterface" id="ca009feb-6bd3-46c2-a922-18763cfe2f1e.9" configVersion="7d9efdcde4a30b48a158dde1648df64100000000"/>
+		<Metadata name="Constant.ИмяБазы" id="d3abee09-9dd3-42e5-8a46-a5b4f251cb54" configVersion="14e373d5ae84a948b419a213312973be00000000"/>
 		<Metadata name="Constant.ИмяСервера" id="ef826143-9bd5-4a20-9422-5331edd55824" configVersion="7294f39cef9af543b6417e410138bfa000000000"/>
 		<Metadata name="Document.ПриходныйОрдер" id="6e0f15a1-0e61-4dcd-8ef8-8ec07d34bc2f" configVersion="e4e3cebb28d54142a0758ec490e7037400000000">
 			<Metadata name="Document.ПриходныйОрдер.TabularSection.Товары" id="44e1f378-979a-4bb5-85cc-d78947196ca1"/>
@@ -41,15 +42,15 @@
 		<Metadata name="Document.РасходныйОрдер.Form.ФормаДокумента" id="086e3de4-1422-4a68-96d4-fc6108b7da83" configVersion="39172e26020bc443b18b60c145037b6c00000000"/>
 		<Metadata name="Document.РасходныйОрдер.Form.ФормаДокумента.Form" id="086e3de4-1422-4a68-96d4-fc6108b7da83.0" configVersion="8e9037a8d6a6c343a6115f0c135ff01f00000000"/>
 		<Metadata name="Document.РасходныйОрдер.ObjectModule" id="9f8f9f32-43e3-4e80-9bc4-c1c6af302c65.0" configVersion="ebadfed03b3fd24c8b4f019d24672c5000000000"/>
-		<Metadata name="HTTPService.DevelPlatformRu" id="a7bd2984-fa9d-4bab-b107-9da6fd432bf9" configVersion="40e74c2b34475d49977100e5e795d89300000000">
-			<Metadata name="HTTPService.DevelPlatformRu.URLTemplate.Products.Method.GetProducts" id="2d501a0f-2da7-4788-8ea7-2e1834e51d3b"/>
-			<Metadata name="HTTPService.DevelPlatformRu.URLTemplate.MainPage.Method.get" id="575a20a3-760c-48f8-88fb-30af785c0f88"/>
-			<Metadata name="HTTPService.DevelPlatformRu.URLTemplate.Info.Method.GetInfo" id="589f26af-7957-46c5-bf3d-2db708401332"/>
-			<Metadata name="HTTPService.DevelPlatformRu.URLTemplate.Info" id="5934a41d-f0ab-4cf0-815a-7dc6a46c3d5c"/>
-			<Metadata name="HTTPService.DevelPlatformRu.URLTemplate.Products" id="d8ea2497-1801-4528-9c5d-0e7012db9c62"/>
-			<Metadata name="HTTPService.DevelPlatformRu.URLTemplate.MainPage" id="e6a972c7-9016-42ee-84f2-cbba406bf90f"/>
+		<Metadata name="HTTPService.PrimitiveService" id="a7bd2984-fa9d-4bab-b107-9da6fd432bf9" configVersion="7feb8d1735db874e8567781f34d2661900000000">
+			<Metadata name="HTTPService.PrimitiveService.URLTemplate.Products.Method.GetProducts" id="2d501a0f-2da7-4788-8ea7-2e1834e51d3b"/>
+			<Metadata name="HTTPService.PrimitiveService.URLTemplate.MainPage.Method.get" id="575a20a3-760c-48f8-88fb-30af785c0f88"/>
+			<Metadata name="HTTPService.PrimitiveService.URLTemplate.Info.Method.GetInfo" id="589f26af-7957-46c5-bf3d-2db708401332"/>
+			<Metadata name="HTTPService.PrimitiveService.URLTemplate.Info" id="5934a41d-f0ab-4cf0-815a-7dc6a46c3d5c"/>
+			<Metadata name="HTTPService.PrimitiveService.URLTemplate.Products" id="d8ea2497-1801-4528-9c5d-0e7012db9c62"/>
+			<Metadata name="HTTPService.PrimitiveService.URLTemplate.MainPage" id="e6a972c7-9016-42ee-84f2-cbba406bf90f"/>
 		</Metadata>
-		<Metadata name="HTTPService.DevelPlatformRu.Module" id="a7bd2984-fa9d-4bab-b107-9da6fd432bf9.0" configVersion="01980cc4b2120b47b36922754be2683200000000"/>
+		<Metadata name="HTTPService.PrimitiveService.Module" id="a7bd2984-fa9d-4bab-b107-9da6fd432bf9.0" configVersion="2ac35f6ffc2c084495c5afb84fe59acf00000000"/>
 		<Metadata name="Language.Русский" id="8994bf9c-39a0-4927-b764-5f463491f428" configVersion="dbe2ab0d26fc2344899c7bcc4a401dc200000000"/>
 		<Metadata name="Report.ДвиженияНоменклатуры" id="0d346579-8ca7-4544-87dc-ef2d400b643b" configVersion="02cd92bff4cf844083748e02b794d49300000000"/>
 		<Metadata name="Report.ДвиженияНоменклатуры.Template.ОсновнаяСхемаКомпоновкиДанных" id="70157422-06d9-42bd-bf36-b692c3a6af0d" configVersion="d28f40efb443174e95778c6fed6c0dc000000000"/>
