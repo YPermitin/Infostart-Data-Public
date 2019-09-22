@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<FilterCriterion uuid="c87c6c83-5ac0-4657-bd26-83f97b1334e2">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.СвязанныеЭлементы" category="Manager">
+				<xr:TypeId>26f46fcb-f613-4759-83be-e70a7a305b8b</xr:TypeId>
+				<xr:ValueId>c3c50966-d21c-4ed2-9533-3d89a9c0751f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.СвязанныеЭлементы" category="List">
+				<xr:TypeId>fbdfc23a-79dd-4b80-90a4-92fbe7ab8415</xr:TypeId>
+				<xr:ValueId>9f89b763-08a9-4b72-a26a-cb74b4eb05e3</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СвязанныеЭлементы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связанные элементы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Заявка</v8:Type>
+				<v8:Type>cfg:CatalogRef.Товары</v8:Type>
+				<v8:Type>cfg:DocumentRef.РасходныйОрдер</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПриходныйОрдер</v8:Type>
+			</Type>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходныйОрдер.Attribute.Заявка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходныйОрдер.TabularSection.СписокНоменклатуры.Attribute.Товар</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйОрдер.Attribute.ПриходныйОрдер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйОрдер.TabularSection.СписокНоменклатуры.Attribute.Товар</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Заявка.TabularSection.СписокНоменклатуры.Attribute.Товар</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

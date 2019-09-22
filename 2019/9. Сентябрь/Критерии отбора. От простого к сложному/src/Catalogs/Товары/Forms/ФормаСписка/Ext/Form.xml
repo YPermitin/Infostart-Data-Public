@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="Группа1" id="12">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Page name="ОбычныйСписок" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обычный список</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обычный список</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбычныйСписокРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="Список" id="1">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="50"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="51">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="54">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="57">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Код" id="6">
+									<DataPath>Список.Code</DataPath>
+									<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="60"/>
+								</LabelField>
+								<LabelField name="Наименование" id="4">
+									<DataPath>Список.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="61"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ИспользуемГруппировки" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используем группировки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используем группировки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИспользуемГруппировкиРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<Table name="Группировки" id="15">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Группировки</DataPath>
+							<RowPictureDataPath>Группировки.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ГруппировкиКонтекстноеМеню" id="16"/>
+							<AutoCommandBar name="ГруппировкиКоманднаяПанель" id="17"/>
+							<ExtendedTooltip name="ГруппировкиРасширеннаяПодсказка" id="63"/>
+							<SearchStringAddition name="ГруппировкиСтрокаПоиска" id="64">
+								<AdditionSource>
+									<Item>Группировки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппировкиСтрокаПоискаКонтекстноеМеню" id="65"/>
+								<ExtendedTooltip name="ГруппировкиСтрокаПоискаРасширеннаяПодсказка" id="66"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГруппировкиСостояниеПросмотра" id="67">
+								<AdditionSource>
+									<Item>Группировки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппировкиСостояниеПросмотраКонтекстноеМеню" id="68"/>
+								<ExtendedTooltip name="ГруппировкиСостояниеПросмотраРасширеннаяПодсказка" id="69"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГруппировкиУправлениеПоиском" id="70">
+								<AdditionSource>
+									<Item>Группировки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппировкиУправлениеПоискомКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="ГруппировкиУправлениеПоискомРасширеннаяПодсказка" id="72"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГруппировкиНаименование" id="18">
+									<DataPath>Группировки.Description</DataPath>
+									<ContextMenu name="ГруппировкиНаименованиеКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ГруппировкиНаименованиеРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="ГруппировкиКод" id="20">
+									<DataPath>Группировки.Code</DataPath>
+									<ContextMenu name="ГруппировкиКодКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ГруппировкиКодРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="БезДинамическогоСчитыванияДанныхСтр" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без динамического считывания данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без динамического считывания данных стр</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="БезДинамическогоСчитыванияДанныхСтрРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<Table name="БезДинамическогоСчитыванияДанных" id="23">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>БезДинамическогоСчитыванияДанных</DataPath>
+							<RowPictureDataPath>БезДинамическогоСчитыванияДанных.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="БезДинамическогоСчитыванияДанныхКонтекстноеМеню" id="24"/>
+							<AutoCommandBar name="БезДинамическогоСчитыванияДанныхКоманднаяПанель" id="25"/>
+							<ExtendedTooltip name="БезДинамическогоСчитыванияДанныхРасширеннаяПодсказка" id="76"/>
+							<SearchStringAddition name="БезДинамическогоСчитыванияДанныхСтрокаПоиска" id="77">
+								<AdditionSource>
+									<Item>БезДинамическогоСчитыванияДанных</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БезДинамическогоСчитыванияДанныхСтрокаПоискаКонтекстноеМеню" id="78"/>
+								<ExtendedTooltip name="БезДинамическогоСчитыванияДанныхСтрокаПоискаРасширеннаяПодсказка" id="79"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БезДинамическогоСчитыванияДанныхСостояниеПросмотра" id="80">
+								<AdditionSource>
+									<Item>БезДинамическогоСчитыванияДанных</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БезДинамическогоСчитыванияДанныхСостояниеПросмотраКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="БезДинамическогоСчитыванияДанныхСостояниеПросмотраРасширеннаяПодсказка" id="82"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БезДинамическогоСчитыванияДанныхУправлениеПоиском" id="83">
+								<AdditionSource>
+									<Item>БезДинамическогоСчитыванияДанных</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БезДинамическогоСчитыванияДанныхУправлениеПоискомКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="БезДинамическогоСчитыванияДанныхУправлениеПоискомРасширеннаяПодсказка" id="85"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВложенныеЗапросы1Код" id="26">
+									<DataPath>БезДинамическогоСчитыванияДанных.Code</DataPath>
+									<ContextMenu name="ВложенныеЗапросы1КодКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВложенныеЗапросы1КодРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<LabelField name="ВложенныеЗапросы1Наименование" id="32">
+									<DataPath>БезДинамическогоСчитыванияДанных.Description</DataPath>
+									<ContextMenu name="ВложенныеЗапросы1НаименованиеКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ВложенныеЗапросы1НаименованиеРасширеннаяПодсказка" id="87"/>
+								</LabelField>
+								<LabelField name="ВложенныеЗапросы1КоличествоВГруппе" id="44">
+									<DataPath>~БезДинамическогоСчитыванияДанных.КоличествоВГруппе</DataPath>
+									<ContextMenu name="ВложенныеЗапросы1КоличествоВГруппеКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ВложенныеЗапросы1КоличествоВГруппеРасширеннаяПодсказка" id="88"/>
+								</LabelField>
+								<LabelField name="ВложенныеЗапросы1КоличестоДокументов" id="46">
+									<DataPath>~БезДинамическогоСчитыванияДанных.КоличестоДокументов</DataPath>
+									<ContextMenu name="ВложенныеЗапросы1КоличестоДокументовКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ВложенныеЗапросы1КоличестоДокументовРасширеннаяПодсказка" id="89"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Товары</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Группировки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Товары</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Родитель</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="БезДинамическогоСчитыванияДанных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без динамического считывания данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникТовары.Ссылка,
+	СправочникТовары.ВерсияДанных,
+	СправочникТовары.ПометкаУдаления,
+	СправочникТовары.Предопределенный,
+	СправочникТовары.Родитель,
+	СправочникТовары.ЭтоГруппа,
+	СправочникТовары.Код,
+	СправочникТовары.Наименование,
+	СправочникТовары.Артикул
+ИЗ
+	Справочник.Товары КАК СправочникТовары</QueryText>
+				<MainTable>Catalog.Товары</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>
